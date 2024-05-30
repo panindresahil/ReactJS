@@ -1,6 +1,6 @@
 function Button() {
     return (
-        <h1>Like</h1>
+        <button>Like</button>
     )
 }
 
