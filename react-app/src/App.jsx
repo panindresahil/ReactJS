@@ -14,13 +14,17 @@ function App() {
     setsearchFoodItem(e.target.value)
   }
 
+  const handleCart = (item) => {
+    alert(`${item} has been added to cart.`);
+  }
+
   return (
     <>
       <center>
         <div className='container'>
           <Header/>
           <Input foodItem={searchFoodItem} handleSearchChange={handleChange}/>
-          <FoodItems items={foodItems}/>
+          <FoodItems items={foodItems} handleClick={handleCart}/>
         </div>
       </center>
     </>
