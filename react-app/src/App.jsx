@@ -3,10 +3,16 @@ import Header from './Components/Header'
 import FoodItems from './Components/FoodItems'
 import Input from './Components/FoodInput'
 import { useState } from 'react'
-import foodItems from './assets/data'
+// import foodItems from './assets/data'
 
 function App() {
   const [searchFoodItem, setsearchFoodItem] = useState("")
+  const [foodItem, addFoodItem] = useState(["Rice", "Dal", "Roti"])
+
+  const handleClick = (e) => {
+    addFoodItem([...foodItem, e])
+    setsearchFoodItem("")
+  }
 
   const handleChange = (e) => {
     setsearchFoodItem(e.target.value)
@@ -21,8 +27,8 @@ function App() {
       <center>
         <div className='container'>
           <Header/>
-          <Input foodItem={searchFoodItem} handleSearchChange={handleChange}/>
-          <FoodItems items={foodItems}  handleClick={handleCart}/>
+          <Input foodItem={searchFoodItem} handleKeyDown={handleClick} handleSearchChange={handleChange}/>
+          {foodItem.length === 0 ? <h1>No Items</h1> : <FoodItems items={foodItem}  handleClick={handleCart}/>}
         </div>
       </center>
     </>

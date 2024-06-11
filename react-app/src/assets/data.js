@@ -16,7 +16,7 @@ const foodItems = [
         Price: 35
     },
     {
-        Item: "Sald",
+        Item: "Salad",
         Price: 25
     }
 ]
