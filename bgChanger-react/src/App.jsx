@@ -20,12 +20,6 @@ function App() {
         <div className="col box" style={{backgroundColor: color}} onClick={changeBgColor}>
           BOX1
         </div>
-        <div className="col box" style={{backgroundColor: color}} onClick={changeBgColor}>
-          BOX2
-        </div>
-        <div className="col box" style={{backgroundColor: color}} onClick={changeBgColor}>
-          BOX3
-        </div>
         </div>
       </div>
     </center>
