@@ -14,7 +14,7 @@ function App() {
   return(
     <>
     <center>
-      <div className="container text-center">
+      <div className="container text-center" >
         <h1 className="heading">BackGround Changer</h1>
         <div className="row">
         <div className="col box" style={{backgroundColor: color}} onClick={changeBgColor}>
